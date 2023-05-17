@@ -24,11 +24,11 @@ Operations:
 
 class Person
 {
-    public $uniqueid = 10;
-    public $name = "name123";
-    public $surename = "";
-    public $sexmf = " ";
-    public $birth_date = " ";
+    public $uniqueintegerid = 10;
+    public $name = "Dmitriy123";
+    public $surname = "gooddimon";
+    public $sexmf = "m";
+    public $birthdate = " ";
 
     public function __construct($uniqueid, $name, $surename, $birth_date, $semf)
     {
@@ -85,6 +85,14 @@ class Mankind
 }
 
 $makind = new Mankind();
+
+foreach ($makind as $index => $item) {
+
+    print_r($index);
+    print_r($item);
+
+}
+
 $file = __FILE__ . '*.csv';
 $csv = fopen(__FILE__ . "./csv.csv", 777);
 var_dump($csv);
