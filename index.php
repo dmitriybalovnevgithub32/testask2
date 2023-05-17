@@ -27,9 +27,12 @@ class Person
     public $uniqueid = 10;
     public $name = "name123";
     public $surename = "";
+    public $sexmf = " ";
     public $birth_date = " ";
 
-    public $semf = "";
+    public function __construct($uniqueid, $name, $surename, $birth_date, $semf)
+    {
+    }
 
 }
 
@@ -62,19 +65,36 @@ Also suggest how to handle the situation when the file is much larger (100 MiB+)
 
 class Mankind
 {
-
-
     public function csv()
     {
 
+    }
+
+    public function getpeoplebyid($id)
+    {
+        $id = 10;
+        $csvresult = fopen(__FILE__ . "./csv.csv", 777);
+        foreach ($csvresult as $index => $item) {
+            if ($index == $id) {
+
+            }
+        }
 
     }
 
 }
 
 $makind = new Mankind();
-$file = __FILE__.'*.csv';
-$csv = fopen(__FILE__ . "./csv.csv",777);
+$file = __FILE__ . '*.csv';
+$csv = fopen(__FILE__ . "./csv.csv", 777);
 var_dump($csv);
 die();
 $makind->csv($csv);
+
+
+class Myclass extends Person;
+$headers1 = ['id', 'fname', 'lname', 'male', 'birthday'];
+
+$headers = ["name", "email", "adress"];
+$data = ['id', "name"]
+
