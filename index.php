@@ -100,7 +100,8 @@ die();
 $makind->csv($csv);
 
 
-class Myclass extends Person;
+class Myclass extends Person
+
 $headers1 = ['id', 'fname', 'lname', 'male', 'birthday'];
 
 $headers = ["name", "email", "adress"];
